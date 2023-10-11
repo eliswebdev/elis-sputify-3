@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RestService } from '../services/rest.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-bg-main',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./bg-main.component.scss']
 })
 export class BgMainComponent {
+  album!: any;
+  constructor(private rest:RestService){
+    //test = this.rest.getAlbum()
+  }
 
+  ngOnInit(){
+    this.rest.getAlbum().subscribe(data => {
+      this.album = data
+      console.log(this.album)
+    })
+  }
 }

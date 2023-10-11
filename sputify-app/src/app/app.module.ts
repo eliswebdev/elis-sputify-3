@@ -8,6 +8,8 @@ import { PlayerComponent } from './player/player.component';
 import { ThumbComponent } from './thumb/thumb.component';
 import { BgMainComponent } from './bg-main/bg-main.component';
 import { BgItemComponent } from './bg-main/bg-item/bg-item.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BgItemComponent } from './bg-main/bg-item/bg-item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
