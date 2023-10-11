@@ -1,0 +1,27 @@
+.thumb{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    padding: 10px;
+    .cover{
+        width: 120px;
+        height: 120px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        img{
+            display: inline;
+            margin: 0 auto;
+            height: 100%;
+            width: auto;
+        }
+    }
+    .information{
+        color: rgb(22, 106, 130);
+        h2{
+            font-size: calc(0.425rem + .9vw);
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+}
