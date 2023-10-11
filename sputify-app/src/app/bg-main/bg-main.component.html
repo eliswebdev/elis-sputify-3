@@ -2,15 +2,9 @@
         <h1>Playlist</h1>
     </div>
     <div class="row justify-content-md-center">
-        <div class="col-xs-12 mt-5">
-            <app-bg-item></app-bg-item>
-        </div>
-        <div class="col-xs-12 mt-5">
-            <app-bg-item></app-bg-item>
-        </div>
-        <div class="col-xs-12 mt-5">
-            <app-bg-item></app-bg-item>
-        </div>
+        <!-- <div *ngFor= "let playlist of playlists" class="col-xs-12 mt-5"> -->
+            <app-bg-item *ngFor= "let playlist of playlists" class="col-xs-12 mt-5" [playlist]="playlist"></app-bg-item>
+        <!-- </div> -->
     </div>
     
 

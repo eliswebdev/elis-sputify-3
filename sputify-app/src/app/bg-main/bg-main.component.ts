@@ -8,15 +8,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./bg-main.component.scss']
 })
 export class BgMainComponent {
-  album!: any;
+  playlists!: any;
   constructor(private rest:RestService){
     //test = this.rest.getAlbum()
   }
 
   ngOnInit(){
-    this.rest.getAlbum().subscribe(data => {
-      this.album = data
-      console.log(this.album)
+    this.rest.getPlaylists().subscribe(data => {
+      this.playlists = data
+      console.log(this.playlists)
     })
   }
 }

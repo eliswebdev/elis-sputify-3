@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RestService } from 'src/app/services/rest.service';
+import { Playlist } from 'src/app/model/playlist';
 
 @Component({
   selector: 'app-bg-item',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class BgItemComponent {
 
+
+  @Input() playlist!: Playlist;
+  constructor(private rest:RestService){
+    
+  }
 }
